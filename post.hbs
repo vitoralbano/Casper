@@ -212,3 +212,14 @@ into the {body} of the default.hbs template --}}
     });
 </script>
 {{/contentFor}}
+
+
+{{#contentFor "lang"}}
+    {{#post}}
+        {{#has tag="#en"}}
+            <html lang="en">
+        {{else}}
+            <html lang="pt-br">
+        {{/has}}
+    {{/post}}
+{{/contentFor}}
